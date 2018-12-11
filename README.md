@@ -3,6 +3,8 @@ Fellowship.ai challenge problem - Language Detection
 
 In this project, we have 21 European languages: Romanic (French, Italian, Spanish, Portuguese, Romanian), Germanic (English, Dutch, German, Danish, Swedish), Slavik (Bulgarian, Czech, Polish, Slovak, Slovene), Finni-Ugric (Finnish, Hungarian, Estonian), Baltic (Latvian, Lithuanian), and Greek. And we need to build a language detection engines to identify different languages of text data. 
 
+### The data resource is European Parliament Proceedings Parallel Corpus 1996-2011 (http://www.statmt.org/europarl/)
+
 For this task, the training corpus is processed in such a way: 1. Strip empty lines and their correspondences; 2. Remove lines with XML-Tags (starting with "<"); 3. Lowercase the text; 4. Split the text data to sentences by period; 5. Remove noisy characters and punctuation; 6. Transform long space to single space; 7. Control the length of each sentence ( > 1)
 
 To balance the data, we control the number of sentences for each language. After preprocess the raw data, we split the `50000 * 21 = 1050000` sentences into train and validation part. 80% of the full dataset is train data and 20% of the full dataset is validation data, which means we have `50000 * 0.8 * 21 = 840000` sentences in the train data and `50000 * 0.2 * 21 = 210000` sentences in the test data.
